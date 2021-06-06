@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="checkTheLongestPalindrome" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="please enter the string" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ke4-W0-KR7">
+                                <rect key="frame" x="121.5" y="166" width="171" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="171" id="nSv-Nm-t1f"/>
+                                    <constraint firstAttribute="height" constant="21" id="pxn-ff-6xd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xmq-Nb-o1q">
+                                <rect key="frame" x="121.5" y="216" width="171" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="Gvc-tW-jpH"/>
+                                    <constraint firstAttribute="width" constant="171" id="OZ6-jV-Obl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kh7-MI-wCp">
+                                <rect key="frame" x="186" y="284" width="42" height="30"/>
+                                <state key="normal" title="check"/>
+                                <connections>
+                                    <action selector="checkButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rdE-46-xa4"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some information about the string" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LP0-LO-Q0u">
+                                <rect key="frame" x="77" y="356" width="260" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ke4-W0-KR7" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ETD-yD-axt"/>
+                            <constraint firstItem="xmq-Nb-o1q" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="IQo-yV-Rf5"/>
+                            <constraint firstItem="LP0-LO-Q0u" firstAttribute="top" secondItem="Kh7-MI-wCp" secondAttribute="bottom" constant="42" id="Ono-y2-8h9"/>
+                            <constraint firstItem="Ke4-W0-KR7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="122" id="VTS-9M-GGy"/>
+                            <constraint firstItem="Kh7-MI-wCp" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="ez9-yQ-ZJq"/>
+                            <constraint firstItem="xmq-Nb-o1q" firstAttribute="top" secondItem="Ke4-W0-KR7" secondAttribute="bottom" constant="29" id="gsH-Qd-0YC"/>
+                            <constraint firstItem="LP0-LO-Q0u" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kd4-U2-Xmt"/>
+                            <constraint firstItem="Kh7-MI-wCp" firstAttribute="top" secondItem="xmq-Nb-o1q" secondAttribute="bottom" constant="34" id="zlt-is-DEF"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="checkButton" destination="Kh7-MI-wCp" id="4gM-0J-5Ob"/>
+                        <outlet property="informLabel" destination="LP0-LO-Q0u" id="6uz-gY-Rh4"/>
+                        <outlet property="strField" destination="xmq-Nb-o1q" id="Ku7-vv-h9O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="79.6875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
